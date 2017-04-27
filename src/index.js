@@ -1,12 +1,6 @@
-import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 import './style.scss';
 
-let time = 0;
-
-function increment() {
-  time += 1;
-  console.log(`${time}`);
-  $('#main').html(`You've been on this page for ${time} seconds.`);
-}
-
-setInterval(increment, 1000);
+ReactDOM.render(<App />, document.getElementById('main'));
