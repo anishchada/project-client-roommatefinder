@@ -5,15 +5,19 @@ class SignIn extends Component {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
+      email: 'asfdf',
+      password: 'asdgsdg',
     };
   }
 
   render() {
     return (
       <div>
-        sign up here
+        <div>
+          sign up here
+          email: {this.state.email}
+          password: {this.state.password}
+        </div>
       </div>
     );
   }

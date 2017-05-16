@@ -5,15 +5,17 @@ class ProfileSetUp extends Component {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
+      email: 'test email',
+      password: 'test password',
     };
   }
 
   render() {
     return (
       <div>
-        Profile Set Up Here
+        <div>
+          Profile Set Up Here
+        </div>
       </div>
     );
   }

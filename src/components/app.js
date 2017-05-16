@@ -8,11 +8,8 @@ import Nav from './nav';
 import '../style.scss';
 
 
-const FallBack = (props) => {
-  return <div>URL Not Found</div>;
-};
-
 const App = (props) => {
+  console.log('in APP');
   return (
     <Router>
       <div>
@@ -21,8 +18,8 @@ const App = (props) => {
           <Route exact path="/" component={LandingPage} />
           <Route path="/signin" component={SignIn} />
           <Route path="/profileSetUp" component={ProfileSetUp} />
-          <Route exact path="/profile/:id" component={Profile} />
-          <Route component={FallBack} />
+          <Route exact path="/profile" component={Profile} />
+          <Route render={() => (<div>page not found</div>)} />
         </Switch>
       </div>
     </Router>
