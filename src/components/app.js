@@ -1,26 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
-import Counter from '../containers/Counter';
-import Controls from '../containers/controls';
+import LandingPage from '../containers/landing_page';
+import SignIn from '../containers/sign_in';
+import ProfileSetUp from '../containers/profile_setup';
+import Nav from './nav';
 import '../style.scss';
 
-const Nav = (props) => {
-  return (
-    <nav>
-      <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-      </ul>
-    </nav>
-  );
-};
-
-const About = (props) => {
-  return <div> All there is to know about me </div>;
-};
-const Welcome = (props) => {
-  return <div><Counter /><Controls /></div>;
-};
 
 const Test = (props) => {
   return <div> ID: {props.match.params.id} </div>;
@@ -36,8 +21,9 @@ const App = (props) => {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/profileSetUp" component={ProfileSetUp} />
           <Route exact path="/test/:id" component={Test} />
           <Route component={FallBack} />
         </Switch>
